@@ -8,8 +8,9 @@ listint_t *insert_node(listint_t **head, int number)
 
 	if (head == NULL)
 	{	
-		new = add_nodeint_end(head, 972);
-		return (new);
+		(*head)->n = number;
+		(*head)->next = NULL;
+		return (*head);
 	}
 	if (number <= h->n)
 	{
