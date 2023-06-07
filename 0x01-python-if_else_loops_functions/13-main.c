@@ -33,7 +33,7 @@ int main(void)
 
     printf("-----------------\n");
 
-    insert_node(&head, 1020);
+    insert_node(&head, -2);
 
     print_listint(head);
 
