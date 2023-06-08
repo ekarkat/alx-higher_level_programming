@@ -7,7 +7,7 @@ if __name__ == "__main__":
     argc = len(list)
     if argc != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit (1)
+        exit(1)
 
     a = int(list[0])
     b = int(list[2])
@@ -23,4 +23,4 @@ if __name__ == "__main__":
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        exit (1)
+        exit(1)
