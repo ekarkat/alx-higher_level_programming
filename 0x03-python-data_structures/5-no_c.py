@@ -11,5 +11,6 @@ def no_c(my_string):
     for i in range(len(c_count) - 1):
         noc = noc + my_string[c_count[i] + 1:c_count[i + 1]]
     """adding last element manuly because the loop stop befor finish"""
-    noc = noc + my_string[c_count[-1] + 1:]
+    if c_count[-1] != len(my_string) - 1:
+        noc = noc + my_string[c_count[-1] + 1:]
     return (noc)
