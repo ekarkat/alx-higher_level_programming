@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-safe_print_division = __import__('3-safe_print_division').safe_print_division
+safe_print_integer_err = \
+    __import__('100-safe_print_integer_err').safe_print_integer_err
 
-a = 12
-b = 2
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
+value = 89
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
-a = 12
-b = 0
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
+value = -89
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
+
+value = "School"
+has_been_print = safe_print_integer_err(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
