@@ -6,13 +6,15 @@ class Square:
     """ Square class """
 
     __size = None
+    def __init__(self, size=0):
+        self.__size = size
 
     @property
     def size(self):
         return self.__size
 
     @size.setter
-    def __init__(self, size=0):
+    def size(self, size=0):
         """ init class by size"""
         if type(size) is not int:
             raise TypeError("size must be an integer")
