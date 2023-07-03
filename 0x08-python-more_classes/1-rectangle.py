@@ -8,7 +8,8 @@ class Rectangle ():
     __height = None
 
     """Init class methof"""
-    def __init__(self, width=0, height=0) -> None:
+    def __init__(self, width=0, height=0):
+        """Init class methof"""
         self.__height = height
         self.__width = width
 
