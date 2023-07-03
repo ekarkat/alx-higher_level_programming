@@ -4,14 +4,12 @@
 
 class Rectangle ():
     """Class triangle"""
-    __width = None
-    __height = None
 
     """Init class methof"""
     def __init__(self, width=0, height=0):
         """Init class methof"""
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
