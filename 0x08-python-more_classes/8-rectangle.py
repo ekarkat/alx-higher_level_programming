@@ -62,7 +62,7 @@ class Rectangle ():
         shape = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                shape = shape + str(self.print_symbol)
+                shape = shape + "#"
             if i != self.__height - 1:
                 shape = shape + "\n"
         return shape
