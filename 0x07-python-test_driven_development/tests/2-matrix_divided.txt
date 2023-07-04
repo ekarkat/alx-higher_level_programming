@@ -1,0 +1,105 @@
+The ``2-matrix_divided`` Module.
+================================
+
+Using the function ``matrix_divided`` from the module above
+===========================================================
+
+Usage:
+======
+
+Importing ``matrix_divided`` function from the module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Simple test : check success
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> matrix_divided([[8, 9, 10], [4, 15, 20]], 2.5)
+    [[3.2, 3.6, 4.0], [1.6, 6.0, 8.0]]
+
+Error cases:
+
+Division by 0:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+Wrong argument for matrix:
+=============================
+
+matrix is an int:
+    >>> matrix_divided(15, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix is a string:
+
+    >>> matrix_divided("Hola", 16)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix is a set of set
+    >>> matrix_divided(((15, 2), (9, 7)), 6)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix is a list of int
+    >>> matrix_divided([15, 2, 7], 8)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matric is None
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix of string:
+    >>> matrix_divided([["hh", "15"], ["bb", "ars"]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix with empty blocks:
+    >>> matrix_divided([[], []], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix with diffrent block sizes:
+    >>> matrix_divided([[3, 7], [1, 2, 3]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix with an empty block
+    >>> matrix_divided([[], [3, 7]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix with wrong :
+    >>> matrix_divided([[None, 16], [3, 7]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+
+Check if div is a number:
+==========================
+
+passing string for div
+    >>> matrix_divided([[1,2,3]], "hol")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+passing char for div
+    >>> matrix_divided([[1,2,3]], 'C')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+
+passing list for div
+    >>> matrix_divided([[1,2,3]], [1, 2])
+    Traceback (most recent call last):
+    TypeError: div must be a number
