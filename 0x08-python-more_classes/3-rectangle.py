@@ -52,7 +52,7 @@ class Rectangle ():
         return perimetre
 
     def __str__(self):
-        """ Prints rectangle with #'s """
+        """ Prints rectangle with #"""
         if self.__width == 0 or self.__height == 0:
             return ""
         shape = ""
