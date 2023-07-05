@@ -1,9 +1,11 @@
 The ``3-say_my_name`` Module.
 
+Usage ``say_my_name``
+
 Import method to test
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Normal cases:
+Normal cases
      >>> say_my_name("HONK", "ISLY")
      My name is HONK ISLY
 
@@ -21,7 +23,7 @@ Passing None
      Traceback (most recent call last):
      TypeError: first_name must be a string
 
-Test wrong type data:
+Test wrong type data
      >>> say_my_name(98, "HONK")
      Traceback (most recent call last):
      TypeError: first_name must be a string
@@ -30,7 +32,7 @@ Test wrong type data:
      Traceback (most recent call last):
      TypeError: last_name must be a string
 
-Passing 3 args:
+Passing 3 args
      >>> say_my_name("TOY", "JOY1", "ABC")
      Traceback (most recent call last):
      TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
