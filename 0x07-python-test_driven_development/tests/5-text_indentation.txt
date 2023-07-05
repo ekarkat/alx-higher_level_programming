@@ -1,4 +1,4 @@
-# run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+The ``5-text_indentation`` module
 
 Importing function from the module:
     >>> text_indentation = __import__('5-text_indentation').text_indentation

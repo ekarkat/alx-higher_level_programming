@@ -5,7 +5,7 @@ Usage: ``matrix devision``
 
 Importing ``matrix_divided`` function from the module
 
-    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Simple test : check success
 
@@ -26,7 +26,6 @@ Division by 0:
     ZeroDivisionError: division by zero
 
 Wrong argument for matrix:
-=============================
 
 matrix is an int:
     >>> matrix_divided(15, 2)
@@ -80,9 +79,7 @@ matrix with wrong :
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
-
 Check if div is a number:
-==========================
 
 passing string for div
     >>> matrix_divided([[1,2,3]], "hol")

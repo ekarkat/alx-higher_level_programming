@@ -1,4 +1,4 @@
-# run test with python3 -m doctest -v ./tests/3-say_my_name.txt
+The ``3-say_my_name`` Module.
 
 First import method to test
 >>> say_my_name = __import__('3-say_my_name').say_my_name
@@ -39,4 +39,3 @@ Passing 3 args:
      Traceback (most recent call last):
      ...
      TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
-
