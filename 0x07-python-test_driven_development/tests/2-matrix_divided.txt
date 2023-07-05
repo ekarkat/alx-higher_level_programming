@@ -1,11 +1,7 @@
 The ``2-matrix_divided`` Module.
-================================
 
-Using the function ``matrix_divided`` from the module above
-===========================================================
 
-Usage:
-======
+Usage: ``matrix devision``
 
 Importing ``matrix_divided`` function from the module
 
