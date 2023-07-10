@@ -20,3 +20,30 @@ Simple Tests:
     >>> bg.integer_validator("num", -1)
     Traceback (most recent call last):
     ValueError: num must be greater than 0
+
+Test wrong input
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("num", None)
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("num", "hhh")
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("num", [1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("num")
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
