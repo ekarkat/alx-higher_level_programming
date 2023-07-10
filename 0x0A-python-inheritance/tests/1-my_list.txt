@@ -1,0 +1,33 @@
+Impor method to test
+>>> MyList = __import__('1-my_list').MyList
+
+SIMPLE CASES:
+
+	>>> list0 = MyList()
+	>>> list0.append(-99999)
+	>>> print(list0)
+	[-99999]
+	>>> list0.print_sorted()
+	[-99999]
+
+	>>> list1 = MyList()
+	>>> list1.append(4)
+	>>> list1.append(10)
+	>>> list1.append(1)
+	>>> list1.print_sorted()
+	[1, 4, 10]
+
+	>>> list2 = MyList()
+	>>> list2.append(15)
+	>>> list2.append(-3)
+	>>> list2.append(0)
+	>>> list2.print_sorted()
+	[-3, 0, 15]
+
+
+Empty list:
+	>>> empty = MyList()
+	>>> print(empty)
+	[]
+	>>> empty.print_sorted()
+	[]
