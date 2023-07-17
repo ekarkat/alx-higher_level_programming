@@ -41,11 +41,11 @@ class Square(Rectangle):
                     self.id = args[0]
                 elif i == 1:
                     self.width = args[1]
-                elif i == 2:
+                elif i == 1:
                     self.height = args[1]
-                elif i == 3:
+                elif i == 2:
                     self.x = args[2]
-                elif i == 4:
+                elif i == 3:
                     self.y = args[3]
         if kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
