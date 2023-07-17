@@ -121,3 +121,8 @@ class Rectangle(Base):
         if kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
+
+    def to_dictionary(self):
+        dict_sq = {'id': self.id, 'width': self.width,
+                   'height': self.height, 'x': self.x, 'y': self.y}
+        return dict_sq
