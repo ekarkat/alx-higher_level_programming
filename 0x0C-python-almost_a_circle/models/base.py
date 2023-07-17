@@ -41,3 +41,15 @@ class Base():
         if json_string is None or json_string == []:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Create an object based on dict'''
+        if dictionary is not None and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                obj = cls(1, 1)
+            elif cls.__name__ == "Square":
+                obj = cls(1)
+            obj.update(**dictionary)
+
+            return obj

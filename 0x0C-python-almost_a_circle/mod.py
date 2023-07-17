@@ -1,10 +1,31 @@
-from models.rectangle import Rectangle
+from models.square import Square
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    Rectangle.save_to_file([r1, r2])
+    s1 = Square(5)
+    print(s1)
 
-    with open("Rectangle.json", "r") as file:
-        print(file.read())
+    s1.update(10)
+    print(s1)
+
+    s1.update(1, 2)
+    print(s1)
+
+    s1.update(1, 2, 3)
+    print(s1)
+
+    s1.update(1, 2, 3, 4)
+    print(s1)
+
+    s1.update(x=12)
+    print(s1)
+
+    s1.update(size=7, y=1)
+    print(s1)
+
+    tobi = {'size':7, 'id':89, 'y':1}
+    
+    print(type(tobi))
+
+    s1.update(**tobi)
+    print(s1)
