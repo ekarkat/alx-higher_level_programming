@@ -75,3 +75,49 @@ class Rectangle(Base):
             self.__y = value
         else:
             raise TypeError("y must be an integer")
+
+    def area(self):
+        """Return area of rectangle"""
+        area = self.height * self.width
+        return area
+
+    def display(self):
+        """prints the Rectangle with the character # """
+
+        for y in range(self.y):
+            print("")
+        for row in range(self.height):
+            for x in range(self.x):
+                print(" ", end='')
+            for lin in range(self.width):
+                print("#", end='')
+            print("")
+
+    def __str__(self):
+        """print str function"""
+        outpt = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                        self.x,
+                                                        self.y,
+                                                        self.width,
+                                                        self.height
+                                                        )
+        return outpt
+
+    def update(self, *args, **kwargs):
+        """update Rectangle"""
+        if len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.width = args[1]
+                elif i == 2:
+                    self.height = args[2]
+                elif i == 3:
+                    self.x = args[3]
+                elif i == 4:
+                    self.y = args[4]
+
+        if kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
