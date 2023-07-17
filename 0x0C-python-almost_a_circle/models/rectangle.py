@@ -123,6 +123,7 @@ class Rectangle(Base):
                 self.__setattr__(key, value)
 
     def to_dictionary(self):
+        """return dict"""
         dict_sq = {'id': self.id, 'width': self.width,
                    'height': self.height, 'x': self.x, 'y': self.y}
         return dict_sq
