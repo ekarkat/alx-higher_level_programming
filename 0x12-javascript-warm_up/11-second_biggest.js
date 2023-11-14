@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function sec_biggest_int (numbers) {
+function sec (numbers) {
   const nums = [];
   if (numbers.length <= 3) {
     return (0);
@@ -10,7 +10,6 @@ function sec_biggest_int (numbers) {
   nums.sort(function (a, b) {
     return a - b;
   });
-  console.log(nums);
   return (nums[nums.length - 2]);
 }
-console.log(sec_biggest_int(process.argv));
+console.log(sec(process.argv));
