@@ -16,10 +16,11 @@ if __name__ == "__main__":
 
     sql_cm = db.cursor()
 
-    sql_cm.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    sql_cm.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     for x in sql_cm:
-        print(x)
+        if x[1][0] == 'N':
+            print(x)
 
     sql_cm.close()
     db.close()
