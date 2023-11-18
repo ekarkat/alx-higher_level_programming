@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states from the database hbtn_0e_0_usa:
-
+lists all cities from the database hbtn_0e_4_usa
 """
 
 from sys import argv
@@ -17,7 +16,10 @@ if __name__ == "__main__":
 
     sql_cm = db.cursor()
 
-    sql_cm.execute("SELECT * FROM states ORDER BY id ASC")
+    sql_cm.execute("SELECT cities.id, cities.name, states.name\
+                    FROM cities\
+                    inner JOIN states ON cities.state_id = states.id\
+                    order by cities.id ASC")
 
     for x in sql_cm:
         print(x)

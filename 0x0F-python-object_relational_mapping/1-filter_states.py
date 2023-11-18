@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states from the database hbtn_0e_0_usa:
-
+Lists all states with a name starting with N (upper N) from the
 """
 
 from sys import argv
@@ -17,7 +16,7 @@ if __name__ == "__main__":
 
     sql_cm = db.cursor()
 
-    sql_cm.execute("SELECT * FROM states ORDER BY id ASC")
+    sql_cm.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
     for x in sql_cm:
         print(x)
