@@ -19,7 +19,8 @@ if __name__ == "__main__":
     sql_cm.execute("SELECT * FROM states WHERE name ='{}'".format(argv[4]))
 
     for x in sql_cm:
-        print(x)
+        if x[1] == argv[4]:
+            print(x)
 
     sql_cm.close()
     db.close()
