@@ -19,7 +19,4 @@ if __name__ == "__main__":
     if not result:
         print("Nothing")
     else:
-        for x in result:
-            if x.id == 1:
-                print("{}: {}".format(x.id, x.name))
-                break
+        print("{}: {}".format(result[0].id, result[0].name))
