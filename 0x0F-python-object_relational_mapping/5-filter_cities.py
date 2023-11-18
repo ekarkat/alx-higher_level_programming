@@ -22,15 +22,16 @@ if __name__ == "__main__":
                     where states.name = %s\
                     order by cities.id ASC", (argv[4],))
 
-    output = []
-    for x in sql_cm:
-        output.append(x[0])
+    row = sql_cm.fetchall()
 
-    for i in range(len(output)):
-        if i != len(output) - 1:
-            print(output[i], end=", ")
+    if not row:
+        print("")
+
+    for i in range(len(row)):
+        if i == len(row) - 1:
+            print(row[i][0])
         else:
-            print(output[i])
+            print(row[i][0], end=", ")
 
     sql_cm.close()
     db.close()
