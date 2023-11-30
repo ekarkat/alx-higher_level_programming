@@ -10,9 +10,9 @@ def find_peak(list_of_integers):
         return list_of_integers[0]
 
     i = 1
-    li = list_of_integers
     while i < len(list_of_integers) - 1:
-        if li[i] > li[i - 1] and li[i] > li[i + 1]:
-            return (li[i])
+        if (list_of_integers[i] > list_of_integers[i - 1]
+                and list_of_integers[i] > list_of_integers[i + 1]):
+            return (list_of_integers[i])
         i += 1
     return (max(list_of_integers))
