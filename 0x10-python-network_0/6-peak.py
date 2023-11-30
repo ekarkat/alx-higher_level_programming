@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Find a peak in a list of unsorted integers."""
+
 
 def find_peak(list_of_integers):
     """Find a peak in a list of unsorted integers."""
@@ -10,7 +12,7 @@ def find_peak(list_of_integers):
         i = 0
         pik = list_of_integers[1]
         lis = list_of_integers
-        while i < len(list_of_integers) -1:
+        while i < (len(list_of_integers) - 1):
             if lis[i] >= lis[i + 1]:
                 pik = lis[i]
             else:
