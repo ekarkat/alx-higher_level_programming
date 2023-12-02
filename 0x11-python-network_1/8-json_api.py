@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     if (content_type is not None
             and 'application/json' in content_type):
-        data = eval(response.text)
+        data = response.json()
         if not data:
             print("No result")
         else:
