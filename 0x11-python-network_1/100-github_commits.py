@@ -4,7 +4,7 @@
 from sys import argv
 import requests
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     repo = argv[2]
     owner = argv[1]
     url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
