@@ -4,7 +4,8 @@ const { writeFile } = require('fs');
 
 const fileName = process.argv[2];
 const string = process.argv[3];
-
-writeFile(fileName, string, function (error) {
+function callback (error) {
   if (error) console.log(error);
-});
+}
+
+writeFile(fileName, string, callback);
