@@ -6,13 +6,11 @@ const { writeFile } = require('fs');
 const url = process.argv[2];
 const path = process.argv[3];
 
-request(url, function (error, _response, body) {
+request(url, (error, _response, body) => {
   if (error) {
     console.log(error);
     return;
   }
 
-  writeFile(path, body, function () {
-    console.log('success');
-  });
+  writeFile(path, body, () => {});
 });
